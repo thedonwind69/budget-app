@@ -1,0 +1,250 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+body {
+    font-family: Questrial;
+    background: rgb(246, 248, 250);
+    margin: 0;
+}
+button {
+    font-family: Questrial;
+    font-size: 20px;
+    cursor: pointer;
+}
+label {
+    padding: 7px;
+}
+input[type='text'], input[type='password'] {
+    font-size: 20px;
+    border-radius: 5px;
+}
+input[type='submit'] {
+    cursor: pointer;
+    text-shadow: 1px 1px 1px rgb(75, 75, 75);
+}
+
+.clearfix {
+    clear: both;
+}
+.error-message {
+    color: rgb(245, 58, 58);
+}
+.search-bar {
+    font-family: Questrial;
+    border-radius: 10px;
+}
+.nav-bar-container {
+    position: relative;
+    font-size: 24px;
+    width: 100%;
+    color: gray; 
+    min-height: 40px;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.tc-link {
+    font-family: Lemon;
+    font-size: 21px;
+}
+.nav-bar-list {
+    padding: 0;
+}
+.nav-bar-list li {
+    padding: 17px;
+    float: left;
+}
+.nav-link {
+    margin: 0;
+    padding: 7px;
+    color: rgb(108, 154, 238);
+    text-decoration: none;
+    border-radius: 25px;
+}
+.nav-link-hover:hover {
+    background-color: rgb(108, 154, 238);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.session-link-hover:hover {
+    color: rgb(174, 206, 255);
+}
+.greeting-logged-in {
+    margin-left: 5px;
+    font-size: 20px;
+}
+.greeting-container {
+    background: image-url('CityStreet5.jpg') rgb(138, 169, 208);
+    background-size: 100% 100%;
+    padding: 100px;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    animation: fadein 1.2s;
+    -moz-animation: fadein 1.2s; /* Firefox */
+    -webkit-animation: fadein 1.2s; /* Safari and Chrome */
+    -o-animation: fadein 1.2s; /* Opera */
+}
+//--fade effect start
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+//---fade effect end
+.footer {
+    text-align: center;
+    font-size: 15px;
+    padding: 25px;
+    color: gray;
+}
+
+.hide-this-shit {
+    display: none;
+}
+
+.search-container {
+    border: 1px solid black;
+    width: 100%;
+}
+
+.search-list-item {
+    border: 1px solid blue;
+    margin: 0;
+    padding: 0;
+}
+
+.search-list-item:hover {
+  background-color: rgb(242, 242, 242);
+}
+
+.city-highlights {
+    font-family: 'Didact Gothic';
+    text-align: center;
+    color: rgb(108, 154, 238);
+    margin: 0;
+    padding: 10px;
+}
+.highlights-background {
+    background-color: white;
+    margin-left: 25px;
+    margin-right: 25px;
+    min-height: 370px;
+    box-shadow: 1px 1px 1px 1px rgb(215, 215, 215);
+}
+.highlights-container {
+    text-align: center;
+    margin: 5px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.highlights-container h1 {
+    color: rgb(25, 49, 94);
+    margin: 0;
+    font-size: 21px;
+}
+.single-highlight {
+    display: inline-block;
+    margin: 2px;
+    padding: 0;
+    border-radius: 10px;
+    width: 170px;
+    height: 170px;
+    background-size: 100% 100%;
+    opacity: 0.85;
+}
+.single-highlight:hover {
+    opacity: 1;
+}
+.highlight-info {
+    color: rgb(254, 161, 0);
+    margin: 0;
+    padding: 0;
+    font-size: 21px;
+}
+//-media queries
+@media screen and (min-width: 2000px) {
+    body {
+        width: 1400px;
+        margin: auto;
+    }
+}
+@media screen and (max-width: 815px) {
+    .greeting-container {
+        padding: 85px;
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 620px) {
+    .highlights-container {
+        display: block;
+    }
+    .highlights-background {
+        min-height: 750px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .greeting-container {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 380px) {
+    .greeting-container {
+        padding: 50px;
+        font-size: 12px;
+    }
+    input[type='text'], input[type='password'] {
+        font-size: 14px;
+    }
+    .nav-bar-container, .tc-link {
+        font-size: 18px;
+    }
+}

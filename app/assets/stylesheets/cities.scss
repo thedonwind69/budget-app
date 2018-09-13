@@ -1,0 +1,525 @@
+// Place all the styles related to the api/cities controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//<---------City Pics Start
+.Atlanta {
+    background-image: image-url('Atlanta.jpg');
+}
+.Austin {
+    background-image: image-url('Austin.jpg');
+}
+.Boston {
+    background-image: image-url('Boston.jpg');
+}
+.Charlotte {
+    background-image: image-url('Charlotte.jpg');
+}
+.Chicago {
+    background-image: image-url('Chicago.jpg');
+}
+.Dallas {
+    background-image: image-url('Dallas.jpg');
+}
+.Denver {
+    background-image: image-url('Denver.jpg');
+}
+.Houston {
+    background-image: image-url('Houston.jpg');
+}
+.LasVegas {
+    background-image: image-url('LasVegas.jpg');
+}
+.LosAngeles {
+    background-image: image-url('LosAngeles.jpg');
+}
+.Miami {
+    background-image: image-url('Miami.jpg');
+}
+.Minneapolis {
+    background-image: image-url('Minneapolis.jpg');
+}
+.NewYork {
+    background-image: image-url('NewYork.jpg');
+}
+.Philadelphia {
+    background-image: image-url('Philadelphia.jpg');
+}
+.Phoenix {
+    background-image: image-url('Phoenix.jpg');
+}
+.Portland {
+    background-image: image-url('Portland.jpg');
+}
+.SanDiego {
+    background-image: image-url('SanDiego.jpg');
+}
+.SanFrancisco {
+    background-image: image-url('SanFrancisco.jpg');
+}
+.Seattle {
+    background-image: image-url('Seattle.jpg');
+}
+.WashingtonDC {
+    background-image: image-url('WashingtonDC.jpg');
+}
+.AtlantaPage0 {
+    background-image: image-url('AtlantaPage0.jpg');
+}
+.AustinPage0 {
+    background-image: image-url('AustinPage0.jpg');
+}
+.BostonPage0 {
+    background-image: image-url('BostonPage0.jpg');
+}
+.CharlottePage0 {
+    background-image: image-url('CharlottePage0.jpg');
+}
+.ChicagoPage0 {
+    background-image: image-url('ChicagoPage0.jpg');
+}
+.DallasPage0 {
+    background-image: image-url('DallasPage0.jpg');
+}
+.DenverPage0 {
+    background-image: image-url('DenverPage0.jpg');
+}
+.HoustonPage0 {
+    background-image: image-url('HoustonPage0.jpg');
+}
+.LasVegasPage0 {
+    background-image: image-url('LasVegasPage0.jpg');
+}
+.LosAngelesPage0 {
+    background-image: image-url('LosAngelesPage0.jpg');
+}
+.MiamiPage0 {
+    background-image: image-url('MiamiPage0.jpg');
+}
+.MinneapolisPage0 {
+    background-image: image-url('MinneapolisPage0.jpg');
+}
+.NewYorkPage0 {
+    background-image: image-url('NewYorkPage0.jpg');
+}
+.PhiladelphiaPage0 {
+    background-image: image-url('PhiladelphiaPage0.jpg');
+}
+.PhoenixPage0 {
+    background-image: image-url('PhoenixPage0.jpg');
+}
+.PortlandPage0 {
+    background-image: image-url('PortlandPage0.jpg');
+}
+.SanDiegoPage0 {
+    background-image: image-url('SanDiegoPage0.jpg');
+}
+.SanFranciscoPage0 {
+    background-image: image-url('SanFranciscoPage0.jpg');
+}
+.SeattlePage0 {
+    background-image: image-url('SeattlePage0.jpg');
+}
+.WashingtonDCPage0 {
+    background-image: image-url('WashingtonDCPage0.jpg');
+}
+//--PagePicChange1
+.AtlantaPage1 {
+    background-image: image-url('AtlantaPage1.jpg');
+}
+.AustinPage1 {
+    background-image: image-url('AustinPage1.jpg');
+}
+.BostonPage1 {
+    background-image: image-url('BostonPage1.jpg');
+}
+.CharlottePage1 {
+    background-image: image-url('CharlottePage1.jpg');
+}
+.ChicagoPage1 {
+    background-image: image-url('ChicagoPage1.jpg');
+}
+.DallasPage1 {
+    background-image: image-url('DallasPage1.jpg');
+}
+.DenverPage1 {
+    background-image: image-url('DenverPage1.jpg');
+}
+.HoustonPage1 {
+    background-image: image-url('HoustonPage1.jpg');
+}
+.LasVegasPage1 {
+    background-image: image-url('LasVegasPage1.jpg');
+}
+.LosAngelesPage1 {
+    background-image: image-url('LosAngelesPage1.jpg');
+}
+.MiamiPage1 {
+    background-image: image-url('MiamiPage1.jpg');
+}
+.MinneapolisPage1 {
+    background-image: image-url('MinneapolisPage1.jpg');
+}
+.NewYorkPage1 {
+    background-image: image-url('NewYorkPage1.jpg');
+}
+.PhiladelphiaPage1 {
+    background-image: image-url('PhiladelphiaPage1.jpg');
+}
+.PhoenixPage1 {
+    background-image: image-url('PhoenixPage1.jpg');
+}
+.PortlandPage1 {
+    background-image: image-url('PortlandPage1.jpg');
+}
+.SanDiegoPage1 {
+    background-image: image-url('SanDiegoPage1.jpg');
+}
+.SanFranciscoPage1 {
+    background-image: image-url('SanFranciscoPage1.jpg');
+}
+.SeattlePage1 {
+    background-image: image-url('SeattlePage1.jpg');
+}
+.WashingtonDCPage1 {
+    background-image: image-url('WashingtonDCPage1.jpg');
+}
+//--PagePicChange2
+.AtlantaPage2 {
+    background-image: image-url('AtlantaPage2.jpg');
+}
+.AustinPage2 {
+    background-image: image-url('AustinPage2.jpg');
+}
+.BostonPage2 {
+    background-image: image-url('BostonPage2.jpg');
+}
+.CharlottePage2 {
+    background-image: image-url('CharlottePage2.jpg');
+}
+.ChicagoPage2 {
+    background-image: image-url('ChicagoPage2.jpg');
+}
+.DallasPage2 {
+    background-image: image-url('DallasPage2.jpg');
+}
+.DenverPage2 {
+    background-image: image-url('DenverPage2.jpg');
+}
+.HoustonPage2 {
+    background-image: image-url('HoustonPage2.jpg');
+}
+.LasVegasPage2 {
+    background-image: image-url('LasVegasPage2.jpg');
+}
+.LosAngelesPage2 {
+    background-image: image-url('LosAngelesPage2.jpg');
+}
+.MiamiPage2 {
+    background-image: image-url('MiamiPage2.jpg');
+}
+.MinneapolisPage2 {
+    background-image: image-url('MinneapolisPage2.jpg');
+}
+.NewYorkPage2 {
+    background-image: image-url('NewYorkPage2.jpg');
+}
+.PhiladelphiaPage2 {
+    background-image: image-url('PhiladelphiaPage2.jpg');
+}
+.PhoenixPage2 {
+    background-image: image-url('PhoenixPage2.jpg');
+}
+.PortlandPage2 {
+    background-image: image-url('PortlandPage2.jpg');
+}
+.SanDiegoPage2 {
+    background-image: image-url('SanDiegoPage2.jpg');
+}
+.SanFranciscoPage2 {
+    background-image: image-url('SanFranciscoPage2.jpg');
+}
+.SeattlePage2 {
+    background-image: image-url('SeattlePage2.jpg');
+}
+.WashingtonDCPage2 {
+    background-image: image-url('WashingtonDCPage2.jpg');
+}
+//City Pics End ------->
+.city-profile-pic-container {
+    width: 100%;
+}
+.city-profile-pic {
+    position: relative;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+    animation: cityprofilepicfadein 1s;
+    -moz-animation: cityprofilepicfadein 1s; /* Firefox */
+    -webkit-animation: cityprofilepicfadein 1s; /* Safari and Chrome */
+    -o-animation: cityprofilepicfadein 1s; /* Opera */
+}
+//fade in
+@keyframes cityprofilepicfadein {
+    from {
+        top: -650px;
+    }
+    to {
+        top: 0px;
+    }
+}
+@-moz-keyframes cityprofilepicfadein { /* Firefox */
+    from {
+        top: -650px;
+    }
+    to {
+        top: 0px;
+    }
+}
+@-webkit-keyframes cityprofilepicfadein { /* Safari and Chrome */
+    from {
+        top: -650px;
+    }
+    to {
+        top: 0px;
+    }
+}
+@-o-keyframes cityprofilepicfadein { /* Opera */
+    from {
+        top: -650px;
+    }
+    to {
+        top: 0px;
+    }
+}
+//end
+.home-page-container {
+    margin: auto;
+    text-align: center;
+}
+.city-item {
+    border-radius: 15px;
+    width: 190px;
+    height: 190px;
+    opacity: 0.80;
+    margin: 2px;
+    background-size: 100% 100%;
+}
+.city-item:hover {
+    opacity: 1.0;
+}
+.city-item-row {
+    display: flex;
+    justify-content: space-evenly;
+}
+.city-profile-header2 {
+    font-size: 120px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 0;
+    padding: 190px;
+}
+.city-pic-button {
+    margin: 0;
+    padding: 0;
+    font-size: 70px;
+    color: transparent;
+    text-align: center;
+    width: 75px;
+    height: 75px;
+    opacity: 0.8;
+}
+.city-pic-button:hover {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    background: rgb(18, 18, 18);
+    border-radius: 50%;
+}
+.city-pic-button-left {
+    margin-left: 10px;
+    position: absolute;
+    top: 45%;
+    left: 0%;
+}
+.city-pic-button-right {
+    margin-right: 10px;
+    position: absolute;
+    top: 45%;
+    right: 0%;
+}
+.dot-list {
+    width: 100px;
+    margin: auto;
+}
+.dot-list li {
+    height: 15px;
+    width: 15px;
+    margin: 4px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    display: inline-block;
+}
+.dot-highlight {
+    background-color: white;
+}
+
+
+
+
+//--------> Media Queries
+@media screen and (max-width: 1020px) {
+    .city-item {
+        width: 140px;
+        height: 140px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .home-page-container {
+        width: 650px;
+    }
+    .city-item {
+        width: 300px;
+        height: 300px;
+    }
+    .city-item-row {
+        display: inline-block;
+    }
+}
+@media screen and (max-width: 875px) {
+    .city-profile-header2 {
+        font-size: 70px;
+        padding: 100px;
+    }
+}
+@media screen and (max-width: 750px) {
+    .home-page-container {
+        width: 370px;
+    }
+    .city-item {
+        width: 370px;
+        height: 370px;
+    }
+    .city-item-row {
+        display: block;       
+    }
+}
+@media screen and (max-width: 550px) {
+    .city-profile-header2 {
+        font-size: 50px;
+        padding: 75px;
+    }
+    .city-pic-button {
+        font-size: 45px;
+        width: 45px;
+        height: 45px;
+    }
+    .dot-list li {
+        height: 10px;
+        width: 10px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .home-page-container {
+        width: 280px;
+    }
+    .city-item {
+        width: 280px;
+        height: 280px;
+    }
+}
+@media screen and (max-width: 350px) {
+    .city-profile-header2 {
+        font-size: 30px;
+        padding: 47px;
+    }
+    .home-page-container {
+        width: 170px;
+    }
+    .city-item {
+        width: 170px;
+        height: 170px;
+    }
+}
+
+.city-loader {
+    color: #d0d0d0;
+    font-size: 200px;
+    text-indent: -9999em;
+    overflow: hidden;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    margin: 72px auto;
+    position: relative;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+    animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+  }
+  @-webkit-keyframes load6 {
+    0% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    5%,
+    95% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    10%,
+    59% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+    }
+    20% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+    }
+    38% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+    }
+    100% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+  }
+  @keyframes load6 {
+    0% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    5%,
+    95% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    10%,
+    59% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+    }
+    20% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+    }
+    38% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+    }
+    100% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+  }
+  @-webkit-keyframes round {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes round {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
