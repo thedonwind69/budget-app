@@ -1,6 +1,5 @@
 import React from 'react';
 import CityIndexItem from './city_index_item';
-import LazyLoad from 'react-lazyload';
 
 class HomePage extends React.Component {
 
@@ -20,7 +19,7 @@ class HomePage extends React.Component {
         })
 
         return (
-            <LazyLoad height={200}>
+          
                 <div class="home-page-container">
 
                     <div class="city-item-row">
@@ -40,7 +39,7 @@ class HomePage extends React.Component {
                     </div>
 
                 </div>
-            </LazyLoad>
+       
         )
     }
 

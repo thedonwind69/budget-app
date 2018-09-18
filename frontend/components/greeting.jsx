@@ -26,8 +26,8 @@ class Greeting extends React.Component {
             <div>
                 {this.currentUserHeading()}
                 <div class="greeting-container">
-                    <h1>TransplantCentral</h1>
-                    <p>Where you can review your favorite city</p>
+                    <h1>Budget App</h1>
+                    <p>Manage your budget... on a budget (It's free)</p>
                 </div>
             <HighlightsContainer />
             </div>
