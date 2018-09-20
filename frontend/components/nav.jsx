@@ -44,8 +44,8 @@ import {
                     <div class="nav-bar-container">
                 
                             <ul class="nav-bar-list left">
-                                <li> <Link class={'tc-link nav-link nav-link-hover'} to="/">TransplantCentral</Link> </li>
-                                <li> <Link class={'nav-link nav-link-hover'} to="/home">Browse</Link></li>   
+                                <li> <Link class={'tc-link nav-link nav-link-hover'} to="/">Home</Link> </li>
+                                <li> <Link class={'nav-link nav-link-hover'} to="/home">Get Started</Link></li>   
                             </ul>
 
                              <ul class="nav-bar-list right">

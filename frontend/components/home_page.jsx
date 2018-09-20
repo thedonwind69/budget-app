@@ -1,5 +1,12 @@
 import React from 'react';
 import CityIndexItem from './city_index_item';
+import {
+    Route,
+    Redirect,
+    Switch,
+    Link,
+    HashRouter
+  } from 'react-router-dom';
 
 class HomePage extends React.Component {
 
@@ -12,32 +19,15 @@ class HomePage extends React.Component {
     }
 
     render () {
-        const all_cities = this.props.cities.map((single_city, index) => {
-            return (
-                <CityIndexItem key={index} city={single_city} />
-            )
-        })
-
         return (
           
                 <div class="home-page-container">
-
-                    <div class="city-item-row">
-                        {all_cities.slice(0, 5)}
-                    </div>
-                        
-                    <div class="city-item-row">
-                        {all_cities.slice(5, 10)}
-                    </div>
-
-                    <div class="city-item-row">
-                        {all_cities.slice(10, 15)}
-                    </div>
-
-                    <div class="city-item-row">
-                        {all_cities.slice(15, 20)}
-                    </div>
-
+                  
+                    <Link class={'nav-link nav-link-hover'} to="/login">LogIn</Link>
+                    <h1>or</h1>
+                    <Link class={'nav-link nav-link-hover'} to="/signup">SignUp</Link>
+                    <h1>if you are already logged in:</h1>
+                     
                 </div>
        
         )
