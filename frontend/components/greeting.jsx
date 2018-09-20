@@ -29,7 +29,6 @@ class Greeting extends React.Component {
                     <h1>Budget App</h1>
                     <p>Manage your budget... on a budget (It's free)</p>
                 </div>
-            <HighlightsContainer />
             </div>
         )
     }
