@@ -27,6 +27,7 @@ class HomePage extends React.Component {
                     <h1>or</h1>
                     <Link class={'nav-link nav-link-hover'} to="/signup">SignUp</Link>
                     <h1>if you are already logged in:</h1>
+                    
                 </div>
        
         )
