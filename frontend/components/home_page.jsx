@@ -14,13 +14,20 @@ class HomePage extends React.Component {
     }
 
     render () {
-        return (
-          
+        if (this.props.currentUser) {
+            return (
                 <div class="home-page-container">
                     <Link to="/form"><button>Create New Budget</button></Link>
                 </div>
-       
-        )
+            )
+        } else {
+            return (
+                <div>
+                    <h1>You are not logged in, please login or sign up!</h1>
+                </div>
+            )
+        }
+
     }
 
 }
