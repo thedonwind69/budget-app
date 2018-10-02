@@ -23,8 +23,7 @@ import SessionFormContainer from './session_form_container';
 
 import HomePageContainer from './home_page_container';
 
-import CityShowContainer from './city_show_container';
-
+import Form from './form';
 
 class App extends React.Component {
 
@@ -41,16 +40,11 @@ class App extends React.Component {
 
                     <Route path="/home" component={HomePageContainer} />
 
-                    <Route path="/cities/:city_id" component={CityShowContainer} />
-
-                    <Route path="/users/:user_id" component={UserShowContainer} />
+                    <Route path='/form' component={Form} />
 
                     <AuthRoute path="/login" component={SessionFormContainer} />
                     <AuthRoute path="/signup" component={SessionFormContainer} />
 
-        
-
-                    
                     <Footer />
             </div>
         )
