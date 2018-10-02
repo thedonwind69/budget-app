@@ -21,9 +21,7 @@ class HomePage extends React.Component {
         return (
           
                 <div class="home-page-container">
-                  
-                    <button>Create New Budget</button>
-
+                    <Link to="/form"><button>Create New Budget</button></Link>
                 </div>
        
         )
