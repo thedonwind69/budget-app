@@ -13,10 +13,6 @@ class HomePage extends React.Component {
         super(props)
     }
 
-    componentDidMount () {
-        this.props.fetchCities();
-    }
-
     render () {
         return (
           
