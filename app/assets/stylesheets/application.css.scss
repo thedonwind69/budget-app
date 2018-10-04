@@ -248,3 +248,49 @@ input[type='submit'] {
         font-size: 18px;
     }
 }
+
+
+// pie chart
+
+.legend {
+    font-size: 20px;
+  }
+  rect {
+    cursor: pointer; 
+    stroke-width: 1;
+    border-radius: 50px;
+  }
+  rect.disabled {
+    fill: transparent !important;
+  }
+  
+  #pie-chart {
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    width: 1200px;
+  }
+
+  #chart {
+    height: 800px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    width: 1200px;
+  }
+  
+  .tooltip {
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 5px #323232;
+    color: rgb(0, 10, 101);
+    display: none;
+    font-size: 20px;
+    left: 130px;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    top: 95px;
+    min-width: 80px;
+    z-index: 10;
+  }

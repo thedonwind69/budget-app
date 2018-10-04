@@ -6,6 +6,7 @@ import {
     Link,
     HashRouter
   } from 'react-router-dom';
+import Budget from './budget';
 
 class HomePage extends React.Component {
 
@@ -23,7 +24,7 @@ class HomePage extends React.Component {
         } else {
             return (
                 <div>
-                    
+
                     <h1>You are not logged in, please login or sign up!</h1>
 
                 </div>
