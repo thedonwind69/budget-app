@@ -38,9 +38,7 @@ class YourBudgets extends React.Component {
         } else {
             return (
                 <div>
-
                     <h1>You are not logged in, please login or sign up!</h1>
-
                 </div>
             )
         }
