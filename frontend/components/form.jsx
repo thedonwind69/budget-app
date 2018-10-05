@@ -18,6 +18,7 @@ class Form extends React.Component {
           
                 <div class="home-page-container">
                     <h1>this is the form</h1>
+                    
                 </div>
        
         )

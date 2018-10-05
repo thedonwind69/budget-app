@@ -21,7 +21,7 @@ import {AuthRoute, ProtectedRoute} from '../util/route_util.jsx';
 
 import SessionFormContainer from './session_form_container';
 
-import HomePageContainer from './home_page_container';
+import YourBudgetsContainer from './your_budgets_container';
 
 import Form from './form';
 
@@ -38,7 +38,7 @@ class App extends React.Component {
 
                     <Route exact path="/" component={GreetingContainer} />
 
-                    <Route path="/home" component={HomePageContainer} />
+                    <Route path="/home" component={YourBudgetsContainer} />
 
                     <Route path='/form' component={Form} />
 
