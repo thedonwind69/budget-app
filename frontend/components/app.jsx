@@ -38,7 +38,7 @@ class App extends React.Component {
 
                     <Route exact path="/" component={GreetingContainer} />
 
-                    <Route path="/home" component={YourBudgetsContainer} />
+                    <Route path="/your_budgets" component={YourBudgetsContainer} />
 
                     <Route path='/form' component={Form} />
 
