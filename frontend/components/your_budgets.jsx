@@ -31,7 +31,6 @@ class YourBudgets extends React.Component {
                     <div>
                         {this.yourBudgets()}
                     </div>
-
                     <Link to="/form"><button>Create New Budget</button></Link>
                 </div>
             )
