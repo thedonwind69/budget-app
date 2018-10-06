@@ -42,9 +42,3 @@ class Api::PostsController < ApplicationController
     end
     
 end
-
-
-
-
-# cities/posts_controller
-# class Cities::PostsController
