@@ -17,14 +17,14 @@ class Api::BudgetsController < ApplicationController
     end
 
     def update
-      @post = Post.find(params[:id])
-      @post.update_attributes(post_params)
+      @budget = Budget.find(params[:id])
+      @budget.update_attributes(budget_params)
       render :show
     end
 
     def destroy
-      @post = Post.find(params[:id])
-      @post.destroy
+      @budget = Budget.find(params[:id])
+      @budget.destroy
       render :show
     end
 
