@@ -7,12 +7,12 @@ class Api::BudgetsController < ApplicationController
     end
 
     def create
-      @post = Post.create(post_params)
-      @post_user
-      if @post.save
+      @user = User.find(params[:user_id])
+      @budget = user.budgets.create(budget_params)
+      if @budget.save
         render :show
       else
-        render json: @post.errors, status: :unprocessable_entity
+        render json: @budget.errors, status: :unprocessable_entity
       end
     end
 
@@ -30,7 +30,7 @@ class Api::BudgetsController < ApplicationController
 
     private
 
-    def post_params
+    def budget_params
       params.require(:budget).permit(
         :month,
         :year,
