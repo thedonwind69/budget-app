@@ -7,6 +7,7 @@ import {
     HashRouter
   } from 'react-router-dom';
 import Budget from './budget';
+import NewBudgetFormContainer from './new_budget_form_container';
 
 class YourBudgets extends React.Component {
 
@@ -31,7 +32,11 @@ class YourBudgets extends React.Component {
                     <div>
                         {this.yourBudgets()}
                     </div>
-                    <Link to="/form"><button>Create New Budget</button></Link>
+
+                    <div>
+                        <NewBudgetFormContainer />
+                    </div>
+
                 </div>
             )
         } else {
