@@ -1,7 +1,7 @@
 export const fetchBudgets = (user_id) => {
     return $.ajax({
         method: 'GET',
-        url: `api/user/${city_id}/posts`
+        url: `api/users/${user_id}/budgets`
     })
 };
 
