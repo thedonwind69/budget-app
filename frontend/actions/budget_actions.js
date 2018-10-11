@@ -2,7 +2,7 @@ import * as BudgetAPIUtil from '../util/budget_api_util';
 export const RECEIVE_BUDGETS = 'RECEIVE_BUDGETS';
 export const RECEIVE_BUDGET = 'RECEIVE_BUDGET';
 export const RECEIVE_BUDGET_ERRORS = 'RECEIVE_BUDGET_ERRORS';
-export const RESET_BUDGETS= 'RESET_BUDGETS';
+export const RESET_BUDGETS = 'RESET_BUDGETS';
 export const RESET_BUDGET_ERRORS = 'RESET_BUDGET_ERRORS';
 // export const UPDATE_WITH_DELETED_POST = 'DELETE_POST';
 // export const RECEIVE_UPDATED_POST = 'RECEIVE_UPDATED_POST';
@@ -32,14 +32,14 @@ export const receiveBudget = (budget) => ({
 
 export const fetchBudgets = (user_id) => {
     return function (dispatch) {
-        BudgetAPIUtil.fetchPosts(user_id).then((all_budgets) =>  dispatch(receiveBudgets(all_budgets)))
+        BudgetAPIUtil.fetchBudgets(user_id).then((all_budgets) =>  dispatch(receiveBudgets(all_budgets)))
     }
 };
 
-export const createPost = (post) => {
+export const createBudget = (user_id, budget) => {
     return function (dispatch) {
-        BudgetAPIUtil.createPost(post).then( (created_post) => (
-            dispatch(receivePost(created_post))
+        BudgetAPIUtil.createBudget(user_id, budget).then( (created_budget) => (
+            dispatch(receiveBudget(created_budget))
         ), err => (
             dispatch(receivePostErrors(err.responseJSON))
         ))
