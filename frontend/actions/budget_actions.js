@@ -7,48 +7,38 @@ export const RESET_BUDGET_ERRORS = 'RESET_BUDGET_ERRORS';
 // export const UPDATE_WITH_DELETED_POST = 'DELETE_POST';
 // export const RECEIVE_UPDATED_POST = 'RECEIVE_UPDATED_POST';
 
-export const receivePosts = (posts) => ({
-    type: RECEIVE_POSTS,
-    posts: posts
+export const receiveBudgets = (budgets) => ({
+    type: RECEIVE_BUDGETS,
+    budgets: budgets
 });
 
-export const receivePost = (post) => ({
-    type: RECEIVE_POST,
-    post: post
+export const receiveBudget = (budget) => ({
+    type: RECEIVE_BUDGET,
+    budget: budget
 });
 
-export const updateWithDeletedPost = (post) => ({
-    type: UPDATE_WITH_DELETED_POST,
-    post: post
-})
+// export const resetPosts = () => ({
+//     type: RESET_POSTS,
+// })
 
-export const receiveUpdatedPost = (post) => ({
-    type: RECEIVE_UPDATED_POST,
-    post: post
-})
+// export const receivePostErrors = (errors) => ({
+//     type: RECEIVE_POST_ERRORS,
+//     errors: errors
+// })
 
-export const resetPosts = () => ({
-    type: RESET_POSTS,
-})
+// export const resetPostErrors = () => ({
+//     type: RESET_POST_ERRORS
+// })
 
-export const receivePostErrors = (errors) => ({
-    type: RECEIVE_POST_ERRORS,
-    errors: errors
-})
-
-export const resetPostErrors = () => ({
-    type: RESET_POST_ERRORS
-})
-
-export const fetchPosts = (city_id) => {
+export const fetchBudgets = (user_id) => {
     return function (dispatch) {
-        PostAPIUtil.fetchPosts(city_id).then((all_posts) =>  dispatch(receivePosts(all_posts)))
+        BudgetAPIUtil.fetchPosts(user_id).then((all_budgets) =>  dispatch(receiveBudgets(all_budgets)))
     }
 };
 
 export const createPost = (post) => {
     return function (dispatch) {
-        PostAPIUtil.createPost(post).then( (created_post) => (
+        BudgetAPIUtil.createPost(post).then( (created_post) => (
             dispatch(receivePost(created_post))
         ), err => (
             dispatch(receivePostErrors(err.responseJSON))
@@ -56,18 +46,3 @@ export const createPost = (post) => {
     }
 };
 
-export const updatePost = (post, user_id, post_id) => {
-    return function (dispatch) {
-        PostAPIUtil.updatePost(post, user_id, post_id).then( (updated_post) => (
-            dispatch(receiveUpdatedPost(updated_post))
-        ), err => (
-            dispatch(receivePostErrors(err.responseJSON))
-        ))
-    }
-};
-
-export const deletePost = (user_id, post_id) => {
-    return function (dispatch) {
-        PostAPIUtil.deletePost(user_id, post_id).then((deletedPost) => dispatch(updateWithDeletedPost(deletedPost)))
-    }
-};
