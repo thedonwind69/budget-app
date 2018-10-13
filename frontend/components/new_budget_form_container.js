@@ -6,7 +6,6 @@ const mapStateToProps = (state) => ({
     currentUser: state.session.currentUser
 })
 
-
 const mapDispatchToProps = (dispatch) => ({
     fetchBudgets: (budgets) => dispatch(fetchBudgets(budgets)),
     createBudget: (user_id, budget) => dispatch(createBudget(user_id, budget))
