@@ -16,7 +16,7 @@ class YourBudgets extends React.Component {
     }
 
     yourBudgets () {
-        var budgets = this.props.currentUser.budgets;
+        var budgets = this.props.currentUserBudgets;
         var displayBudgets = budgets.map((singleBudget) => {
             return (
                 <div><Budget budget={singleBudget}></Budget></div>
@@ -26,7 +26,13 @@ class YourBudgets extends React.Component {
     }  
 
     componentDidMount () {
-        this.props.fetchBudgets(this.props.currentUser.id);
+        if (this.props.currentUser) {
+             this.props.fetchBudgets(this.props.currentUser.id);
+        }
+    }
+
+    componentWillUnmount () {
+        this.props.resetBudgets();
     }
 
     render () {

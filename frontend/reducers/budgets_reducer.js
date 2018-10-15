@@ -1,4 +1,4 @@
-import {RECEIVE_BUDGETS, RECEIVE_BUDGET} from '../actions/BUDGET_actions';
+import {RECEIVE_BUDGETS, RECEIVE_BUDGET, RESET_BUDGETS} from '../actions/BUDGET_actions';
 import merge from 'lodash/merge';
 
 const budgetsReducer = (state = {}, action) => {
@@ -9,8 +9,8 @@ const budgetsReducer = (state = {}, action) => {
         case RECEIVE_BUDGET:
             const newBudget = {[action.budget.id]: action.budget};
             return merge({}, state, newBudget);
-        // case RESET_BUDGETS:
-        //     return {};
+        case RESET_BUDGETS:
+            return {};
         default:
             return state;
     }

@@ -8,7 +8,7 @@ class Api::BudgetsController < ApplicationController
 
     def create
       @user = User.find(params[:user_id])
-      @budget = user.budgets.create(budget_params)
+      @budget = @user.budgets.create(budget_params)
       if @budget.save
         render :show
       else

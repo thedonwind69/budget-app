@@ -17,9 +17,9 @@ export const receiveBudget = (budget) => ({
     budget: budget
 });
 
-// export const resetPosts = () => ({
-//     type: RESET_POSTS,
-// })
+export const resetBudgets = () => ({
+    type: RESET_BUDGETS,
+})
 
 // export const receivePostErrors = (errors) => ({
 //     type: RECEIVE_POST_ERRORS,
@@ -40,9 +40,17 @@ export const createBudget = (user_id, budget) => {
     return function (dispatch) {
         BudgetAPIUtil.createBudget(user_id, budget).then( (created_budget) => (
             dispatch(receiveBudget(created_budget))
-        ), err => (
-            dispatch(receivePostErrors(err.responseJSON))
         ))
     }
 };
+
+// export const createBudget = (user_id, budget) => {
+//     return function (dispatch) {
+//         BudgetAPIUtil.createBudget(user_id, budget).then( (created_budget) => (
+//             dispatch(receiveBudget(created_budget))
+//         ), err => (
+//             dispatch(receivePostErrors(err.responseJSON))
+//         ))
+//     }
+// };
 
