@@ -25,6 +25,10 @@ class YourBudgets extends React.Component {
         return displayBudgets;
     }
 
+    componentDidMount () {
+        
+    }
+
     render () {
         if (this.props.currentUser) {
             return (
