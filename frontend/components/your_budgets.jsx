@@ -23,10 +23,10 @@ class YourBudgets extends React.Component {
             )
         });
         return displayBudgets;
-    }
+    }  
 
     componentDidMount () {
-        
+        this.props.fetchBudgets(this.props.currentUser.id);
     }
 
     render () {

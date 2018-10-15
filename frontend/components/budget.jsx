@@ -15,8 +15,9 @@ class Budget extends React.Component {
 
     render () {
         return (
-            <div>
-                <h1>this is a single budget</h1>
+            <div class='single-budget'>
+                <h1>{this.props.budget.month}</h1>
+                <h1>{this.props.budget.year}</h1>
             </div>
         )
        

@@ -40,7 +40,7 @@ class NewBudgetForm extends React.Component {
     submitBudget(event) {
         event.preventDefault();
         const createdBudget = Object.assign({}, this.state);
-        this.props.createBudget(createdBudget);
+        this.props.createBudget(this.props.currentUser.id, createdBudget);
         this.clearForm();
     }
 
