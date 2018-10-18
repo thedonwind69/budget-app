@@ -5,7 +5,7 @@ import {
     Switch,
     Link,
     HashRouter
-  } from 'react-router-dom';
+} from 'react-router-dom';
 
 class Budget extends React.Component {
 
