@@ -216,6 +216,9 @@ input[type='submit'] {
     border: 1px solid black;
     margin: auto;
 }
+.single-budget:hover {
+    background-color: rgb(132, 185, 255);
+}
 
 //-media queries
 @media screen and (min-width: 2000px) {
