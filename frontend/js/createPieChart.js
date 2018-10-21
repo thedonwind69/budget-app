@@ -1,4 +1,4 @@
-var d3 = require("./d3.js");
+// var d3 = require("./d3.js");
 
 const createPieChart = (dataset) => {
 
@@ -96,7 +96,7 @@ path.on('mouseover', function(d) {
  var percentage = Math.round(1000 * d.data.percentage / total) / 10;
  tooltip.select('.label').html(d.data.type);                     
  tooltip.select('.percent').html(percentage + "%");
-//  tooltip.select('.count').html('$' + d.data.amount);        
+ tooltip.select('.count').html('$' + d.data.amount);        
  tooltip.style('display', 'block');                     
 });                                                           
 
@@ -109,65 +109,6 @@ path.on('mousemove', function(d) {
     .style('left', (d3.event.layerX + 10) + 'px'); 
   });
 
-
-var legend = svg.selectAll('.legend') 
-  .data(pie(dataset)) 
-  .enter()
-  .append('g') 
-  .attr('class', 'legend') 
-  .attr('transform', function(d, i) {                   
-    var height = legendRectSize + legendSpacing; 
-    var offset =  height * dataset.length / 2; 
-    var horz = 18 * legendRectSize; 
-    var vert = i * height - offset;               
-      return 'translate(' + 500 + ',' + vert + ')';     
-   });
-
-
-legend.append('rect')                                
-  .attr('width', legendRectSize)                        
-  .attr('height', legendRectSize)                    
-  .style('fill', function(d, i) { return color1[i]; }) 
-  .style('stroke', function(d, i) { return color1[i]; }) 
-  .on('click', function(type) {
-    var rect = d3.select(this); 
-    var enabled = true; 
-    var totalEnabled = d3.sum(dataset.map(function(d) { 
-      return (d.enabled) ? 1 : 0;
-    }));
-
-    if (rect.attr('class') === 'disabled') { 
-      rect.attr('class', ''); 
-    } else {
-      if (totalEnabled < 2) return; 
-      rect.attr('class', 'disabled'); 
-      enabled = false; 
-    }
-
-    pie.value(function(d) { 
-      if (d.type === type.data.type) d.enabled = enabled; 
-        return (d.enabled) ? d.amount : 0; 
-    });
-
-    path = path.data(pie(dataset)); 
-
-    path.transition() 
-      .duration(700) 
-      .attrTween('d', function(d) { 
-        var interpolate = d3.interpolate(this._current, d); 
-        this._current = interpolate(0);
-        return function(t) {
-          return arc(interpolate(t));
-        };
-      });
-  });
-
-
-legend.append('text')                                    
-  .attr('x', legendRectSize + legendSpacing)
-  .attr('y', legendRectSize - legendSpacing) 
-  .attr('style', 'font-size: 18px; fill: white')
-  .text(function(d) { return d.data.type; }); 
 }
 
 export default createPieChart;
