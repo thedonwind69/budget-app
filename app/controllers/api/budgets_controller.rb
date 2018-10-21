@@ -34,6 +34,7 @@ class Api::BudgetsController < ApplicationController
       params.require(:budget).permit(
         :month,
         :year,
+        :salary,
         :user_id,
       )
     end

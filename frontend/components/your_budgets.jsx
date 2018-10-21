@@ -32,7 +32,7 @@ class YourBudgets extends React.Component {
     }
 
     componentWillUnmount () {
-        this.props.resetBudgets();
+        // this.props.resetBudgets();
     }
 
     render () {

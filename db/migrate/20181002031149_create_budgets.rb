@@ -4,6 +4,7 @@ class CreateBudgets < ActiveRecord::Migration[5.1]
       t.string :month, null: false
       t.integer :year, null: false
       t.references :user, null: false
+      t.integer :salary, null: false
       t.timestamps
     end
   end

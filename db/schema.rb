@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20181002031149) do
     t.string "month", null: false
     t.integer "year", null: false
     t.bigint "user_id", null: false
+    t.integer "salary", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_budgets_on_user_id"

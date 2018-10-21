@@ -15,6 +15,7 @@ class NewBudgetForm extends React.Component {
         this.state = {
             month: null,
             year: null,
+            salary: null,
             user_id: this.props.currentUser ? this.props.currentUser.id : null,
         }
     }
@@ -35,6 +36,7 @@ class NewBudgetForm extends React.Component {
         this.setState({
             month: null,
             year: null,
+            salary: null
         })
     }
 
@@ -72,7 +74,10 @@ class NewBudgetForm extends React.Component {
                         <label for='year'>Year</label>
                             <br/>
                         <input class='post-subject' id='year' type='number' onChange={this.update('year')}/>
-
+                            <br/>
+                        <label for='salary'>Salary</label>
+                            <br/>
+                        <input class='post-subject' id='salary' type='number' onChange={this.update('salary')}/>
                             <br />
                         <input class='post-submit-button' type='submit' value='Create New Budget' />
                     </form>
