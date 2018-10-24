@@ -1,10 +1,9 @@
 class Api::ExpensesController < ApplicationController
 
-
     def index
         @user = User.find(params[:user_id])
         @budget = @user.budgets.find_by(id: params[:budget_id])
-        @all_expense = @budget.expenses
+        @all_expenses = @budget.expenses
         render :index
     end
 
