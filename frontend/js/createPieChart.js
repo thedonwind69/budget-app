@@ -2,7 +2,7 @@
 
 const createPieChart = (dataset) => {
 
-var width = 1200;
+var width = 580;
 var height = 500;
 
 var radius = Math.min(width, height) / 2;
@@ -23,7 +23,7 @@ var svg = d3.select('#pie-chart')
   .attr('width', width) 
   .attr('height', height)
   .append('g') 
-  .attr('transform', 'translate(' + (400) + ',' + (height / 2) + ')');
+  .attr('transform', 'translate(' + (270) + ',' + (height / 2) + ')');
 
 var arc = d3.arc()
   .innerRadius(0) 
