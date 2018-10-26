@@ -30,6 +30,7 @@ class Api::ExpensesController < ApplicationController
     #   render :show
     # end
 
+    
     private
 
     def expense_params
