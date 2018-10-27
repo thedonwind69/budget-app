@@ -1,24 +1,24 @@
-import {RECEIVE_BUDGETS, RECEIVE_BUDGET, RESET_BUDGETS} from '../actions/BUDGET_actions';
+import {RECEIVE_EXPENSES, RECEIVE_EXPENSE, RESET_EXPENSES} from '../actions/expense_actions';
 import merge from 'lodash/merge';
 
-const budgetsReducer = (state = {}, action) => {
+const expensesReducer = (state = {}, action) => {
     Object.freeze(state);
     switch(action.type) {
-        case RECEIVE_BUDGETS:
-            // return action.budgets;
+        case RECEIVE_EXPENSES:
+            // return action.EXPENSEs;
             const newState = {};
-            action.budgets.forEach((budget) => {
-                newState[budget.id] = budget;
+            action.expenses.forEach((expense) => {
+                newState[expense.id] = expense;
             });
             return newState;
-        case RECEIVE_BUDGET:
-            const newBudget = {[action.budget.id]: action.budget};
-            return merge({}, state, newBudget);
-        case RESET_BUDGETS:
+        case RECEIVE_EXPENSE:
+            const newExpense = {[action.expense.id]: action.expense};
+            return merge({}, state, newExpense);
+        case RESET_EXPENSES:
             return {};
         default:
             return state;
     }
 };
 
-export default budgetsReducer
+export default expensesReducer
