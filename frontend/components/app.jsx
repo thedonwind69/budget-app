@@ -39,6 +39,8 @@ class App extends React.Component {
                     <AuthRoute path="/login" component={SessionFormContainer} />
                     <AuthRoute path="/signup" component={SessionFormContainer} />
 
+                    <div class='clearfix'></div>
+
                     <Footer />
             </div>
         )

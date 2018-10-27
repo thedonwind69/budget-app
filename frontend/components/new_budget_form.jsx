@@ -48,7 +48,7 @@ class NewBudgetForm extends React.Component {
     }
 
     render () {
-        console.log(this.state);
+
         return (
             <div>
                 <div ref='postForm' class={`post-form-container`}>
