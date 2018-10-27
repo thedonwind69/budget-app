@@ -1,23 +1,23 @@
 import * as EXPENSEAPIUtil from '../util/EXPENSE_api_util';
-export const RECEIVE_expenses = 'RECEIVE_expenses';
+export const RECEIVE_EXPENSES = 'RECEIVE_EXPENSES';
 export const RECEIVE_EXPENSE = 'RECEIVE_EXPENSE';
 export const RECEIVE_EXPENSE_ERRORS = 'RECEIVE_EXPENSE_ERRORS';
-export const RESET_expenses = 'RESET_expenses';
+export const RESET_EXPENSES = 'RESET_EXPENSES';
 export const RESET_EXPENSE_ERRORS = 'RESET_EXPENSE_ERRORS';
 // export const UPDATE_WITH_DELETED_POST = 'DELETE_POST';
 // export const RECEIVE_UPDATED_POST = 'RECEIVE_UPDATED_POST';
 
-export const receiveexpenses = (expenses) => ({
+export const receiveExpenses = (expenses) => ({
     type: RECEIVE_EXPENSES,
     expenses: expenses
 });
 
-export const receiveEXPENSE = (expense) => ({
+export const receiveExpense = (expense) => ({
     type: RECEIVE_EXPENSE,
     expense: expense
 });
 
-export const resetexpenses = () => ({
+export const resetExpenses = () => ({
     type: RESET_EXPENSES,
 })
 
