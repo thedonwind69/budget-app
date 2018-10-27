@@ -30,13 +30,13 @@ export const resetExpenses = () => ({
 //     type: RESET_POST_ERRORS
 // })
 
-export const fetchexpenses = (user_id) => {
+export const fetchExpenses = (user_id) => {
     return function (dispatch) {
         EXPENSEAPIUtil.fetchexpenses(user_id).then((all_expenses) =>  dispatch(receiveexpenses(all_expenses)))
     }
 };
 
-export const createEXPENSE = (user_id, EXPENSE) => {
+export const createExpense = (user_id, EXPENSE) => {
     return function (dispatch) {
         EXPENSEAPIUtil.createEXPENSE(user_id, EXPENSE).then( (created_EXPENSE) => (
             dispatch(receiveEXPENSE(created_EXPENSE))
