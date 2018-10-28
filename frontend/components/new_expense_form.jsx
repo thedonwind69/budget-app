@@ -86,7 +86,6 @@ class NewExpenseForm extends React.Component {
                 </div>
             </div>
         )
-       
     }
 
 }
