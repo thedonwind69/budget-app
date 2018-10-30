@@ -93,9 +93,9 @@ path.on('mouseover', function(d) {
   return (d.enabled) ? d.percentage : 0;                                      
   }));                              
                        
- var percentage = Math.round(1000 * d.data.percentage / total) / 10;
+//  var percentage = Math.round(1000 * d.data.percentage / total) / 10;
  tooltip.select('.label').html(d.data.type);                     
- tooltip.select('.percent').html(percentage + "%");
+//  tooltip.select('.percent').html(percentage + "%");
  tooltip.select('.count').html('$' + d.data.amount);        
  tooltip.style('display', 'block');                     
 });                                                           

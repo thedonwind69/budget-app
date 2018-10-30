@@ -16,6 +16,13 @@ class EditBudget extends React.Component {
         super(props)
     }
 
+    componentDidMount () {
+        var {currentBudget, currentUser} = this.props;
+        var currentBudgetId = currentBudget.id;
+        var currentUserId = currentUser.id
+        this.props.fetchExpenses(currentUserId, currentBudgetId);
+    }
+
     componentWillUnmount () {
         this.props.resetBudgets();
     }
@@ -34,13 +41,8 @@ class EditBudget extends React.Component {
 
                 <h1>Month of {currentBudget.month} {currentBudget.year}</h1>
                 <h1>{currentBudget.salary} annual salary</h1>
-                <h1>Your take home bi-weekly pay-check is: {this.calculateTakeHomePay()[0].amount}</h1>
-
-                <div class='left'>
-                    <PieChart currentBudget={currentBudget} takeHomePayDataset={this.calculateTakeHomePay()}/>
-                </div>
-
-                <div class='right'>
+                
+                <div>
                     <NewExpenseFormContainer currentBudget={currentBudget} takeHomePayDataset={this.calculateTakeHomePay()}/>
                 </div>
 

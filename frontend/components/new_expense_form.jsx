@@ -9,6 +9,9 @@ import {
 } from 'react-router-dom';
 import calculatePayCheck from '../js/calculatePayCheck';
 
+import createPieChart from '../js/createPieChart';
+
+
 class NewExpenseForm extends React.Component {
 
     constructor(props) {
@@ -22,14 +25,17 @@ class NewExpenseForm extends React.Component {
         }
     }
 
-    componentWillMount () {
-        var currentBudgetId = this.props.currentBudget.id;
-        var currentUserId = this.props.currentUser.id
-        this.props.fetchExpenses(currentUserId, currentBudgetId);
+    componentDidMount () {
+        var {currentBudget, takeHomePayDataset, currentExpenses} = this.props;
+        createPieChart(takeHomePayDataset);
     }
 
     componentWillUnmount () {
         this.props.resetExpenses();
+    }
+
+    componentDidUpdate () {
+        
     }
 
     update (field) {
@@ -60,10 +66,18 @@ class NewExpenseForm extends React.Component {
     }
 
     render () {
-        console.log(this.state);
+        var {currentBudget, takeHomePayDataset, currentExpenses} = this.props;
+        console.log(takeHomePayDataset);
+        console.log(currentExpenses);
         return (
             <div>
-                 <div ref='postForm' class={`post-form-container`}>
+                <h1>Your take home bi-weekly pay-check is: {takeHomePayDataset[0].amount}</h1>
+                <h1>Your take home bi-weekly pay-check AFTER expenses is :</h1>
+                <div class='left' id='pie-chart'>
+
+                </div>
+
+                 <div ref='postForm' class={`right post-form-container`}>
                     <form ref="postFormReset" onSubmit={this.submitExpense.bind(this)}>
                         <label for='category'>Category</label>
                             <br/>
@@ -84,6 +98,8 @@ class NewExpenseForm extends React.Component {
                         <input class='post-submit-button' type='submit' value='Add New Expense' />
                     </form>
                 </div>
+
+
             </div>
         )
     }

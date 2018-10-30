@@ -5,7 +5,7 @@ const expensesReducer = (state = {}, action) => {
     Object.freeze(state);
     switch(action.type) {
         case RECEIVE_EXPENSES:
-            // return action.EXPENSEs;
+            // return action.expenses;
             const newState = {};
             action.expenses.forEach((expense) => {
                 newState[expense.id] = expense;
