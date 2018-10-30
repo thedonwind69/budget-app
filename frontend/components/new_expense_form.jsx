@@ -63,7 +63,6 @@ class NewExpenseForm extends React.Component {
         console.log(this.state);
         return (
             <div>
-                
                  <div ref='postForm' class={`post-form-container`}>
                     <form ref="postFormReset" onSubmit={this.submitExpense.bind(this)}>
                         <label for='category'>Category</label>
