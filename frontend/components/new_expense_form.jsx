@@ -30,7 +30,6 @@ class NewExpenseForm extends React.Component {
         createPieChart(takeHomePayDataset);
     }
 
-    
     componentWillUnmount () {
         this.props.resetExpenses();
     }
