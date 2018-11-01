@@ -6,7 +6,7 @@ import {fetchExpenses, createExpense, resetExpenses} from '../actions/expense_ac
 const mapStateToProps = (state, ownProps) => ({
     currentUser: state.session.currentUser,
     currentBudget: state.entities.budgets[ownProps.match.params.budget_id],
-    currentExpenses: state.entities.expenses
+    currentExpenses: Object.keys(state.entities.expenses).map((key) => state.entities.expenses[key])
 })
 
 const mapDispatchToProps = (dispatch) => ({

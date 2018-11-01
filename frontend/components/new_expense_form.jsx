@@ -27,7 +27,14 @@ class NewExpenseForm extends React.Component {
 
     componentDidMount () {
         var {currentBudget, takeHomePayDataset, currentExpenses} = this.props;
-        
+        console.log(currentExpenses);
+        for (let i=0; i<currentExpenses.length; i++) {
+            var expense = currentExpenses[i];
+            let expenseObject = {};
+            expenseObject['type'] = expense.category;
+            expenseObject['amount'] = expense.amount;
+            takeHomePayDataset.push(expenseObject);
+        }
         createPieChart(takeHomePayDataset);
     }
 
@@ -68,8 +75,7 @@ class NewExpenseForm extends React.Component {
 
     render () {
         var {currentBudget, takeHomePayDataset, currentExpenses} = this.props;
-        console.log(takeHomePayDataset);
-        console.log(currentExpenses);
+
         return (
             <div>
                 <h1>Your take home bi-weekly pay-check is: {takeHomePayDataset[0].amount}</h1>
