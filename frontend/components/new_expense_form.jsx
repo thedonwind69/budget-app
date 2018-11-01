@@ -27,6 +27,7 @@ class NewExpenseForm extends React.Component {
 
     componentDidMount () {
         var {currentBudget, takeHomePayDataset, currentExpenses} = this.props;
+        
         createPieChart(takeHomePayDataset);
     }
 
