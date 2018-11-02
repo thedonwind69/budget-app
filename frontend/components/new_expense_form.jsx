@@ -38,6 +38,8 @@ class NewExpenseForm extends React.Component {
         createPieChart(takeHomePayDataset);
     }
 
+    
+
     componentWillUnmount () {
         this.props.resetExpenses();
     }
@@ -83,6 +85,9 @@ class NewExpenseForm extends React.Component {
                 <div class='left' id='pie-chart'>
 
                 </div>
+
+                <button class='post-submit-button' onClick={}>View Paycheck Info</button>
+
 
                  <div ref='postForm' class={`right post-form-container`}>
                     <form ref="postFormReset" onSubmit={this.submitExpense.bind(this)}>
