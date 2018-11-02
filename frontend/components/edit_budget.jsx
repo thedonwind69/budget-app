@@ -29,7 +29,7 @@ class EditBudget extends React.Component {
 
     calculateTakeHomePay () {
         var {currentBudget} = this.props;
-        var takeHomePay = calculatePayCheck(currentBudget.salary, "bi-weekly");
+        var takeHomePay = calculatePayCheck(currentBudget.salary, "monthly");
         return takeHomePay;
     }
 

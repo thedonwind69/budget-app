@@ -39,6 +39,9 @@ const calculatePayCheck = (payAmount, frequency) => {
         else if (frequency === 'weekly') {
             type.amount = type.amount / 52
         }
+        else if (frequency === 'monthly') {
+            type.amount = type.amount / 12
+        }
         type.amount = Math.round(type.amount);
     }
 

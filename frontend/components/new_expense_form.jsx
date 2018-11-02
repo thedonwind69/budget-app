@@ -25,27 +25,33 @@ class NewExpenseForm extends React.Component {
         }
     }
 
-    componentDidMount () {
+    generatePayInfo () {
         var {currentBudget, takeHomePayDataset, currentExpenses} = this.props;
-        console.log(currentExpenses);
+        var pieButton = ReactDOM.findDOMNode(this.refs.pieButton);
+        pieButton.classList.add('hide-this-shit');
+        var allExpenses = [];
+        for (let j=0; j<takeHomePayDataset.length; j++) {
+            allExpenses.push(takeHomePayDataset[j]);
+        }
         for (let i=0; i<currentExpenses.length; i++) {
             var expense = currentExpenses[i];
             let expenseObject = {};
             expenseObject['type'] = expense.category;
             expenseObject['amount'] = expense.amount;
-            takeHomePayDataset.push(expenseObject);
-        }
-        createPieChart(takeHomePayDataset);
+            allExpenses.push(expenseObject);
+        } 
+        console.log(allExpenses);
+        createPieChart(allExpenses);
     }
-
-    
 
     componentWillUnmount () {
         this.props.resetExpenses();
     }
 
     componentDidUpdate () {
-        
+        var pieChart = ReactDOM.findDOMNode(this.refs.pieChart);
+        pieChart.innerHTML = "";
+        this.generatePayInfo();
     }
 
     update (field) {
@@ -59,6 +65,8 @@ class NewExpenseForm extends React.Component {
     clearForm () {
         const postFormReset = ReactDOM.findDOMNode(this.refs.postFormReset);
         postFormReset.reset();
+        const category = ReactDOM.findDOMNode(this.refs.category);
+        category.selectedIndex = 0;
         this.setState({
             category: null,
             amount: null,
@@ -80,21 +88,26 @@ class NewExpenseForm extends React.Component {
 
         return (
             <div>
-                <h1>Your take home bi-weekly pay-check is: {takeHomePayDataset[0].amount}</h1>
-                <h1>Your take home bi-weekly pay-check AFTER expenses is :</h1>
-                <div class='left' id='pie-chart'>
+                <h1>Your take-home monthly pay is : {takeHomePayDataset[0].amount}</h1>
+                <h1>Your take-home monthly pay AFTER expenses is :</h1>
+                <div ref='pieChart' class='left' id='pie-chart'>
 
                 </div>
-
-                <button class='post-submit-button' onClick={}>View Paycheck Info</button>
-
+                
+                <button ref='pieButton' onClick={this.generatePayInfo.bind(this)} class='post-submit-button'>View Paycheck Info:</button>
 
                  <div ref='postForm' class={`right post-form-container`}>
                     <form ref="postFormReset" onSubmit={this.submitExpense.bind(this)}>
-                        <label for='category'>Category</label>
-                            <br/>
-                        <input class='post-subject' id='category' type='text' onChange={this.update('category')}/>
-                            <br/>
+                    <label for='category'>Category</label>
+                            <br />
+                            <select class='post-category-dropdown' ref='category' id='category' onChange={this.update('category')}>
+                                <option value="" selected disabled hidden>Choose Category</option>
+                                <option value="Food">Food</option>
+                                <option value="Entertainment">Entertainment</option>
+                                <option value="Utilities">Utilities</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <br />
                         <label for='amount'>Amount</label>
                             <br/>
                         <input class='post-subject' id='amount' type='number' onChange={this.update('amount')}/>
