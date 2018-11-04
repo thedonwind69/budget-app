@@ -28,19 +28,31 @@ class NewExpenseForm extends React.Component {
     generatePayInfo () {
         var {currentBudget, takeHomePayDataset, currentExpenses} = this.props;
         var pieButton = ReactDOM.findDOMNode(this.refs.pieButton);
+        var pieChart = ReactDOM.findDOMNode(this.refs.pieChart);
+        pieChart.innerHTML = "";
         pieButton.classList.add('hide-this-shit');
         var allExpenses = [];
         for (let j=0; j<takeHomePayDataset.length; j++) {
             allExpenses.push(takeHomePayDataset[j]);
         }
-        for (let i=0; i<currentExpenses.length; i++) {
-            var expense = currentExpenses[i];
-            let expenseObject = {};
-            expenseObject['type'] = expense.category;
-            expenseObject['amount'] = expense.amount;
-            allExpenses.push(expenseObject);
-        } 
-        console.log(allExpenses);
+        var expenseObject = {};
+        for (let i = 0; i<currentExpenses.length; i++) {
+            let currentExpense = currentExpenses[i];
+            if (!expenseObject[currentExpense.category]) {
+                expenseObject[currentExpense.category] = currentExpense.amount;
+            } else {
+                expenseObject[currentExpense.category] += currentExpense.amount;
+            }
+        }
+        var expenseObjectKeys = Object.keys(expenseObject);
+        for (let k=0; k < expenseObjectKeys.length; k++) {
+            var expenseCategoryObject = {};
+            var currentKey = expenseObjectKeys[k];
+            expenseCategoryObject['type'] = currentKey;
+            expenseCategoryObject['amount'] = expenseObject[currentKey];
+            allExpenses.push(expenseCategoryObject);
+        }
+
         createPieChart(allExpenses);
     }
 
@@ -49,9 +61,17 @@ class NewExpenseForm extends React.Component {
     }
 
     componentDidUpdate () {
-        var pieChart = ReactDOM.findDOMNode(this.refs.pieChart);
-        pieChart.innerHTML = "";
         this.generatePayInfo();
+    }
+
+    afterExpenses () {
+        var {currentBudget, takeHomePayDataset, currentExpenses} = this.props;
+        var monthlyTakeHomePay = takeHomePayDataset[0].amount;
+        var totalExpenses = 0;
+        currentExpenses.forEach((expense) => {
+            totalExpenses += expense.amount;
+        })
+        return monthlyTakeHomePay - totalExpenses;
     }
 
     update (field) {
@@ -85,11 +105,10 @@ class NewExpenseForm extends React.Component {
 
     render () {
         var {currentBudget, takeHomePayDataset, currentExpenses} = this.props;
-
         return (
             <div>
                 <h1>Your take-home monthly pay is : {takeHomePayDataset[0].amount}</h1>
-                <h1>Your take-home monthly pay AFTER expenses is :</h1>
+                <h1>Your take-home monthly pay AFTER expenses is :{this.afterExpenses()}</h1>
                 <div ref='pieChart' class='left' id='pie-chart'>
 
                 </div>
@@ -105,7 +124,7 @@ class NewExpenseForm extends React.Component {
                                 <option value="Food">Food</option>
                                 <option value="Entertainment">Entertainment</option>
                                 <option value="Utilities">Utilities</option>
-                                <option value="Other">Other</option>
+                                <option value="Misc">Misc</option>
                             </select>
                             <br />
                         <label for='amount'>Amount</label>

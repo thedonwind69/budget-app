@@ -61,14 +61,14 @@ var path = svg.selectAll('path')
     .attr("class", "pie-slice")
   .each(function(d) { this._current - d; }); 
 
-    path.transition()
-    .duration(1000)
-    .attrTween('d', function(d) {
-        var interpolate = d3.interpolate({startAngle: 0, endAngle: 0}, d);
-        return function(t) {
-            return arc(interpolate(t));
-        };
-    });
+    // path.transition()
+    // .duration(1000)
+    // .attrTween('d', function(d) {
+    //     var interpolate = d3.interpolate({startAngle: 0, endAngle: 0}, d);
+    //     return function(t) {
+    //         return arc(interpolate(t));
+    //     };
+    // });
 
 //text
     // var text = svg.selectAll('text')
