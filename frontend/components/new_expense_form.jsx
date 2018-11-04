@@ -101,6 +101,7 @@ class NewExpenseForm extends React.Component {
         const createdExpense = Object.assign({}, this.state);
         this.props.createExpense(this.state.user_id, currentBudgetId, createdExpense);
         this.clearForm();
+        
     }
 
     render () {
