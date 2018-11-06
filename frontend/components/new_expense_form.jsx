@@ -26,7 +26,7 @@ class NewExpenseForm extends React.Component {
     }
 
     generatePayInfo () {
-        var {currentBudget, takeHomePayDataset, currentExpenses} = this.props;
+        var {takeHomePayDataset, currentExpenses} = this.props;
         var pieButton = ReactDOM.findDOMNode(this.refs.pieButton);
         var pieChart = ReactDOM.findDOMNode(this.refs.pieChart);
         pieChart.innerHTML = "";
