@@ -65,7 +65,7 @@ class NewExpenseForm extends React.Component {
     }
 
     afterExpenses () {
-        var {currentBudget, takeHomePayDataset, currentExpenses} = this.props;
+        var {takeHomePayDataset, currentExpenses} = this.props;
         var monthlyTakeHomePay = takeHomePayDataset[0].amount;
         var totalExpenses = 0;
         currentExpenses.forEach((expense) => {
@@ -101,7 +101,12 @@ class NewExpenseForm extends React.Component {
         const createdExpense = Object.assign({}, this.state);
         this.props.createExpense(this.state.user_id, currentBudgetId, createdExpense);
         this.clearForm();
-        
+
+    }
+
+    displayAllExpenses () {
+        var {currentExpenses} = this.props;
+
     }
 
     render () {
@@ -111,6 +116,10 @@ class NewExpenseForm extends React.Component {
                 <h1>Your take-home monthly pay is : {takeHomePayDataset[0].amount}</h1>
                 <h1>Your take-home monthly pay AFTER expenses is :{this.afterExpenses()}</h1>
                 <div ref='pieChart' class='left' id='pie-chart'>
+
+                </div>
+
+                <div>
 
                 </div>
                 
