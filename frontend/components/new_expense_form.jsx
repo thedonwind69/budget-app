@@ -7,10 +7,7 @@ import {
     Link,
     HashRouter
 } from 'react-router-dom';
-import calculatePayCheck from '../js/calculatePayCheck';
-
 import createPieChart from '../js/createPieChart';
-
 
 class NewExpenseForm extends React.Component {
 
