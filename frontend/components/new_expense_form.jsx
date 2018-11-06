@@ -49,7 +49,6 @@ class NewExpenseForm extends React.Component {
             expenseCategoryObject['amount'] = expenseObject[currentKey];
             allExpenses.push(expenseCategoryObject);
         }
-
         createPieChart(allExpenses);
     }
 
@@ -114,7 +113,6 @@ class NewExpenseForm extends React.Component {
             )
         })
         return displayExpenses.reverse();
-
     }
 
     render () {
@@ -160,7 +158,6 @@ class NewExpenseForm extends React.Component {
                         </form>
                     </div>
                 </div>
-
 
                 <div class='clearfix'></div>
 
