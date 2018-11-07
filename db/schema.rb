@@ -25,20 +25,6 @@ ActiveRecord::Schema.define(version: 20181024011607) do
     t.index ["user_id"], name: "index_budgets_on_user_id"
   end
 
-  create_table "categories", force: :cascade do |t|
-    t.string "name", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "cities", force: :cascade do |t|
-    t.string "name", null: false
-    t.text "description"
-    t.string "img"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "expenses", force: :cascade do |t|
     t.string "category", null: false
     t.string "description", null: false
@@ -48,21 +34,6 @@ ActiveRecord::Schema.define(version: 20181024011607) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["budget_id"], name: "index_expenses_on_budget_id"
-  end
-
-  create_table "posts", force: :cascade do |t|
-    t.string "subject", null: false
-    t.text "content", null: false
-    t.integer "rating", null: false
-    t.bigint "user_id", null: false
-    t.bigint "city_id", null: false
-    t.bigint "category_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_posts_on_category_id"
-    t.index ["city_id"], name: "index_posts_on_city_id"
-    t.index ["user_id", "city_id", "category_id"], name: "index_posts_on_user_id_and_city_id_and_category_id", unique: true
-    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

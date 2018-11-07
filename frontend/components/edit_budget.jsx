@@ -7,7 +7,6 @@ import {
     HashRouter
 } from 'react-router-dom';
 import calculatePayCheck from '../js/calculatePayCheck';
-import PieChart from './pie_chart';
 import NewExpenseFormContainer from './new_expense_form_container';
 
 class EditBudget extends React.Component {

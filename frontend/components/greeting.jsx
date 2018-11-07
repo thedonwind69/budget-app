@@ -7,7 +7,6 @@ import {
     Link,
     HashRouter
   } from 'react-router-dom';
-import HighlightsContainer from './highlights_container';
 
 class Greeting extends React.Component {
 
