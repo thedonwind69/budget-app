@@ -36,22 +36,17 @@ class EditBudget extends React.Component {
         var {currentBudget} = this.props;
         if (this.props.currentUser) {
             return (
-            <div>
-
-                <h1>Month of {currentBudget.month} {currentBudget.year}</h1>
-                <h1>{currentBudget.salary} annual salary</h1>
-                
                 <div>
-                    <NewExpenseFormContainer currentBudget={currentBudget} takeHomePayDataset={this.calculateTakeHomePay()}/>
+                    <h1>Month of {currentBudget.month} {currentBudget.year}</h1>
+                    <h1>{currentBudget.salary} annual salary</h1>
+                    <div>
+                        <NewExpenseFormContainer currentBudget={currentBudget} takeHomePayDataset={this.calculateTakeHomePay()}/>
+                    </div>
                 </div>
-
-            </div>
             ) 
         } else {
             return <Redirect to='/login'/>
         }
-
-       
     }
 
 }
