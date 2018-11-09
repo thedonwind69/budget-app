@@ -1,4 +1,4 @@
-import {RECEIVE_BUDGETS, RECEIVE_BUDGET, RESET_BUDGETS} from '../actions/BUDGET_actions';
+import {RECEIVE_BUDGETS, RECEIVE_BUDGET, RESET_BUDGETS} from '../actions/budget_actions';
 import merge from 'lodash/merge';
 
 const budgetsReducer = (state = {}, action) => {
