@@ -1,10 +1,9 @@
 ### Budget App
 
-![alt text](https://media.giphy.com/media/Lqf9W0Mabui6kQdPxR/giphy.gif)
+![alt text](http://g.recordit.co/nEHma6mcQK.gif)
 
-[Live Game](https://thedonwind69.github.io/visualizer-project/#/)
+[Live Game](https://donnguyenbudgetapp.herokuapp.com/)
 
-- Simple bar chart displaying the 10-year population growth of the top 5 fastest growing American cities.
-- Interactive pie chart visualizing racial demographics for each city.
-- Programmed and dispalyed dynamically using D3.js, Javascript, and React.js.
-- Technologies Used: Javascript, D3.js, React.js, HTML, CSS, Webpack.
+- Full-Stack application allowing users to manage their monthly budgets and expenses.
+- Pie chart programmed and displayed dynamically for data visualization (D3.js) for paycheck calculations and info.
+- Technologies Used: Javascript, D3.js, React.js, HTML, CSS, Webpack, Ruby, Rails, PostgreSQL.			
