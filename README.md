@@ -13,5 +13,5 @@ Directions:
 - Access your budgets at the top left-corner at "Your Budgets".
 - Create a budget by the month, enter the month and year, and annual salary. Your salary will then automatically be taxed based on how much money you make.
 - Enter your budget page and see the breakdown of where your money is going.
-- Then add expenses, and at the end of the month, see how much take-home money you have left.
+- Then add your expenses, and at the end of the month, see how much take-home money you have left.
 		
