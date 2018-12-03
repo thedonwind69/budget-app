@@ -124,14 +124,10 @@ class NewExpenseForm extends React.Component {
 
                 <div>
                     <div ref='pieChart' class='left' id='pie-chart'>
-
                     </div>
-
                     <button ref='pieButton' onClick={this.generatePayInfo.bind(this)} class='post-submit-button'>View Paycheck Info:</button>
-
                     <div ref='postForm' class={`post-form-container`}>
                         <form ref="postFormReset" onSubmit={this.submitExpense.bind(this)}>
-                    
                                 <br />
                                 <select class='post-category-dropdown' ref='category' id='category' onChange={this.update('category')}>
                                     <option value="" selected disabled hidden>Choose Category</option>
