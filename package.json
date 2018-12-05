@@ -1,10 +1,11 @@
 {
   "name": "budget-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "![alt text](http://g.recordit.co/nEHma6mcQK.gif)",
   "main": "webpack.config.js",
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "test": "test"
   },
   "dependencies": {
     "babel-core": "^6.26.3",
@@ -14,14 +15,14 @@
     "d3": "^5.7.0",
     "lodash": "^4.17.11",
     "npm": "^6.4.1",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
-    "react-redux": "^5.0.7",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-redux": "^5.1.1",
     "react-router-dom": "^4.3.1",
-    "redux": "^4.0.0",
+    "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-    "webpack": "^4.19.0"
+    "webpack": "^4.27.0"
   },
   "devDependencies": {
     "webpack-cli": "^3.1.0"
