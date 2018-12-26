@@ -8,6 +8,7 @@ import {
     HashRouter
 } from 'react-router-dom';
 import createPieChart from '../js/createPieChart';
+import Expense from './expense';
 
 class NewExpenseForm extends React.Component {
 
@@ -103,12 +104,7 @@ class NewExpenseForm extends React.Component {
         var displayExpenses = currentExpenses.map((expense) => {
             return (
                 <li>
-                    <div>
-                        <h1>{expense.date} : {expense.category}</h1>
-                        <p>Amount: ${expense.amount}</p>
-                        <p>Description:</p>
-                        <p>{expense.description}</p>
-                    </div>
+                    <Expense expense={expense} />
                 </li>
             )
         })
