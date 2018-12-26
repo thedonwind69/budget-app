@@ -113,12 +113,10 @@ class NewExpenseForm extends React.Component {
 
     render () {
         var {takeHomePayDataset} = this.props;
-     
         return (
             <div>
                 <h1>Your take-home monthly pay is : {takeHomePayDataset[0].amount}</h1>
                 <h1>Your take-home monthly pay AFTER expenses is :{this.afterExpenses()}</h1>
-
                 <div>
                     <div ref='pieChart' class='left' id='pie-chart'>
                     </div>
