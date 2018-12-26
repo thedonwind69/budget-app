@@ -105,7 +105,8 @@ class NewExpenseForm extends React.Component {
                 <li>
                     <div>
                         <h1>{expense.date} : {expense.category}</h1>
-                        <p>${expense.amount}</p>
+                        <p>Amount: ${expense.amount}</p>
+                        <p>Description:</p>
                         <p>{expense.description}</p>
                     </div>
                 </li>
