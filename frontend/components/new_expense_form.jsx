@@ -148,9 +148,7 @@ class NewExpenseForm extends React.Component {
                         </form>
                     </div>
                 </div>
-
                 <div class='clearfix'></div>
-
                 <div class='all-expenses'>
                     <ul>
                         {this.displayAllExpenses()}
