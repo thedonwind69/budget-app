@@ -19,14 +19,14 @@ export const resetExpenses = () => ({
     type: RESET_EXPENSES,
 })
 
-// export const receiveExpenseErrors = (errors) => ({
-//     type: RECEIVE_EXPENSE_ERRORS,
-//     errors: errors
-// })
+export const receiveExpenseErrors = (errors) => ({
+    type: RECEIVE_EXPENSE_ERRORS,
+    errors: errors
+})
 
-// export const resetExpenseErrors = () => ({
-//     type: RESET_EXPENSE_ERRORS
-// })
+export const resetExpenseErrors = () => ({
+    type: RESET_EXPENSE_ERRORS
+})
 
 export const fetchExpenses = (user_id, budget_id) => {
     return function (dispatch) {
@@ -34,22 +34,22 @@ export const fetchExpenses = (user_id, budget_id) => {
     }
 };
 
+// export const createExpense = (user_id, budget_id, expense) => {
+//     return function (dispatch) {
+//         EXPENSEAPIUtil.createExpense(user_id, budget_id, expense).then( (created_expense) => (
+//             dispatch(receiveExpense(created_expense))
+//         ))
+//     }
+// };
+
+
 export const createExpense = (user_id, budget_id, expense) => {
     return function (dispatch) {
         EXPENSEAPIUtil.createExpense(user_id, budget_id, expense).then( (created_expense) => (
             dispatch(receiveExpense(created_expense))
+        ), err => (
+            dispatch(receiveExpenseErrors(err.responseJSON))
         ))
     }
 };
-
-
-// export const createEXPENSE = (user_id, EXPENSE) => {
-//     return function (dispatch) {
-//         EXPENSEAPIUtil.createEXPENSE(user_id, EXPENSE).then( (created_EXPENSE) => (
-//             dispatch(receiveEXPENSE(created_EXPENSE))
-//         ), err => (
-//             dispatch(receiveExpenseErrors(err.responseJSON))
-//         ))
-//     }
-// };
 
