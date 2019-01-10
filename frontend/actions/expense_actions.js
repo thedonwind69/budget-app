@@ -34,15 +34,6 @@ export const fetchExpenses = (user_id, budget_id) => {
     }
 };
 
-// export const createExpense = (user_id, budget_id, expense) => {
-//     return function (dispatch) {
-//         EXPENSEAPIUtil.createExpense(user_id, budget_id, expense).then( (created_expense) => (
-//             dispatch(receiveExpense(created_expense))
-//         ))
-//     }
-// };
-
-
 export const createExpense = (user_id, budget_id, expense) => {
     return function (dispatch) {
         EXPENSEAPIUtil.createExpense(user_id, budget_id, expense).then( (created_expense) => (
