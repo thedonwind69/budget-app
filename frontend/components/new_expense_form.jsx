@@ -1,12 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {
-    Route,
-    Redirect,
-    Switch,
-    Link,
-    HashRouter
-} from 'react-router-dom';
 import createPieChart from '../js/createPieChart';
 import Expense from './expense';
 
@@ -55,6 +48,7 @@ class NewExpenseForm extends React.Component {
 
     componentWillUnmount () {
         this.props.resetExpenses();
+        this.props.resetExpenseErrors();
     }
 
     componentDidUpdate () {
@@ -96,6 +90,7 @@ class NewExpenseForm extends React.Component {
         var currentBudgetId = this.props.currentBudget.id;
         const createdExpense = Object.assign({}, this.state);
         this.props.createExpense(this.state.user_id, currentBudgetId, createdExpense);
+        this.props.resetExpenseErrors();
         this.clearForm();
     }
 
@@ -109,6 +104,15 @@ class NewExpenseForm extends React.Component {
             )
         })
         return displayExpenses.reverse();
+    }
+
+    displayErrors () {
+        var displayErrors = this.props.expenseErrors.map((error, i) => {
+            return <li style={{color: 'red'}} key={`${i}`}>{error}</li>;
+        })
+        if (this.props.expenseErrors.length > 0) {
+            return displayErrors;
+        }
     }
 
     render () {
@@ -146,6 +150,9 @@ class NewExpenseForm extends React.Component {
                                 <br/>
                             <input class='post-submit-button' type='submit' value='Add New Expense' />
                         </form>
+
+                        <div><ul>{this.displayErrors()}</ul></div>
+
                     </div>
                 </div>
                 <div class='clearfix'></div>

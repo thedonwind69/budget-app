@@ -1,18 +1,22 @@
 import {connect} from 'react-redux';
 import NewExpenseForm from './new_expense_form';
-import {fetchExpenses, createExpense, resetExpenses} from '../actions/expense_actions';
-import {fetchBudgets, createBudget, resetBudgets} from '../actions/budget_actions';
+import {fetchExpenses, createExpense, resetExpenses, resetExpenseErrors} from '../actions/expense_actions';
+import {resetBudgets} from '../actions/budget_actions';
 
 const mapStateToProps = (state) => ({
     currentUser: state.session.currentUser,
-    currentExpenses: Object.keys(state.entities.expenses).map((key) => state.entities.expenses[key])
+    currentExpenses: Object.keys(state.entities.expenses).map((key) => state.entities.expenses[key]),
+    expenseErrors: Object.keys(state.entities.expensesErrors).map((key) => {
+        return `${key} ${state.entities.expensesErrors[key][0]}`;
+    })
 })
     
 const mapDispatchToProps = (dispatch) => ({
     fetchExpenses: (user_id, budget_id) => dispatch(fetchExpenses(user_id, budget_id)),
     createExpense: (user_id, budget_id, expense) => dispatch(createExpense(user_id, budget_id, expense)),
     resetExpenses: () => dispatch(resetExpenses()),
-    resetBudgets: () => dispatch(resetBudgets())
+    resetBudgets: () => dispatch(resetBudgets()),
+    resetExpenseErrors: () => dispatch(resetExpenseErrors())
 })
 
 const NewExpenseFormContainer = connect(mapStateToProps, mapDispatchToProps)(NewExpenseForm);
