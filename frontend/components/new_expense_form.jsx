@@ -150,7 +150,9 @@ class NewExpenseForm extends React.Component {
                                 <br/>
                             <input class='post-submit-button' type='submit' value='Add New Expense' />
                         </form>
+
                         <div><ul>{this.displayErrors()}</ul></div>
+                        
                     </div>
                 </div>
                 <div class='clearfix'></div>
