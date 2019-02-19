@@ -17,9 +17,11 @@ class EditBudget extends React.Component {
 
     componentDidMount () {
         var {currentBudget, currentUser} = this.props;
-        var currentBudgetId = currentBudget.id;
-        var currentUserId = currentUser.id
-        this.props.fetchExpenses(currentUserId, currentBudgetId);
+        if (this.props.currentUser) {
+            var currentBudgetId = currentBudget.id;
+            var currentUserId = currentUser.id
+            this.props.fetchExpenses(currentUserId, currentBudgetId);
+        }
     }
 
     componentWillUnmount () {

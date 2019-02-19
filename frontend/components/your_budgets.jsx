@@ -38,11 +38,9 @@ class YourBudgets extends React.Component {
                     <div>
                         {this.yourBudgets()}
                     </div>
-
                     <div>
                         <NewBudgetFormContainer />
                     </div>
-
                 </div>
             )
         } else {

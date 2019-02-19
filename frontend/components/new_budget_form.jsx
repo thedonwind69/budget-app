@@ -44,13 +44,30 @@ class NewBudgetForm extends React.Component {
         event.preventDefault();
         const createdBudget = Object.assign({}, this.state);
         this.props.createBudget(this.props.currentUser.id, createdBudget);
+        this.props.resetBudgetErrors();
         this.clearForm();
+    }
+
+    componentWillUnmount () {
+        this.props.resetBudgetErrors();
+    }
+
+    displayBudgetErrors () {
+        var displayErrors = this.props.budgetErrors.map((error, i) => {
+            return <li style={{color: 'red'}} key={`${i}`}>{error}</li>;
+        })
+        if (this.props.budgetErrors.length > 0) {
+            return displayErrors;
+        }
     }
 
     render () {
 
         return (
             <div>
+                <div>
+                    <ul>{this.displayBudgetErrors()}</ul>
+                </div>
                 <div ref='postForm' class={`post-form-container`}>
                     <form ref="postFormReset" onSubmit={this.submitBudget.bind(this)}>
                         <label for='month'>Month</label>
