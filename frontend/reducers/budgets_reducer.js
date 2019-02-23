@@ -21,7 +21,11 @@ const budgetsReducer = (state = {}, action) => {
                 return budget.id !== action.budget.id
                 }    
             )
-            return newStateWithoutDeletedBudget;
+            const newStateGoddammit = {};
+            newStateWithoutDeletedBudget.forEach((single_budget) => {
+                newStateGoddammit[single_budget.id] = single_budget;
+            });
+            return newStateGoddammit;
         default:
             return state;
     }

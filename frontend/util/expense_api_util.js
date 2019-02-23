@@ -13,9 +13,9 @@ export const createExpense = (user_id, budget_id, expense) => (
     })
 );
 
-// export const deleteBudget = (user_id, budget_id) => (
-//     $.ajax({
-//         method: 'DELETE',
-//         url: `api/users/${user_id}/budgets/${budget_id}`
-//     })
-// )
+export const deleteExpense = (user_id, budget_id, expense_id) => (
+    $.ajax({
+        method: 'DELETE',
+        url: `api/users/${user_id}/budgets/${budget_id}/expenses/${expense_id}`
+    })
+)

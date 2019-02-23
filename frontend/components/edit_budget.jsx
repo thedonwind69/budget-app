@@ -12,12 +12,12 @@ import NewExpenseFormContainer from './new_expense_form_container';
 class EditBudget extends React.Component {
 
     constructor(props) {
-        super(props)
-    }
+        super(props);
+    }  
 
     componentDidMount () {
         var {currentBudget, currentUser} = this.props;
-        if (this.props.currentUser) {
+        if (currentUser && currentBudget) {
             var currentBudgetId = currentBudget.id;
             var currentUserId = currentUser.id
             this.props.fetchExpenses(currentUserId, currentBudgetId);
@@ -35,8 +35,8 @@ class EditBudget extends React.Component {
     }
 
     render () {
-        var {currentBudget} = this.props;
-        if (this.props.currentUser) {
+        var {currentBudget, currentUser} = this.props;
+        if (currentUser && currentBudget) {
             return (
                 <div>
                     <h1>Month of {currentBudget.month} {currentBudget.year}</h1>
