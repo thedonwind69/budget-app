@@ -23,14 +23,12 @@ class Budget extends React.Component {
         return (
             <div class='single-budget'>
                 <Link to={`/budgets/${budget.id}`}>
-                    <h1>Budget ID is {budget.id}</h1>
                     <h1>{budget.month} {budget.year}</h1>
                     <h1>Annual Salary: {budget.salary}</h1>
                 </Link>
                 <button class='post-submit-button' onClick={this.deleteBudget.bind(this)}>Delete Budget</button>
             </div>
         )
-       
     }
 
 }

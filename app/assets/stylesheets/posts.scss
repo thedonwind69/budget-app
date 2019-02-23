@@ -201,7 +201,7 @@ input[type='radio'] {
         height: 25px;
     }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
     .post-content {
         font-size: 14px;
         min-width: 250px;
@@ -224,5 +224,16 @@ input[type='radio'] {
     .post-update-form textarea, .post-update-form input[type="text"] {
         font-size: 15px;
         min-width: 185px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .post-subject {
+        font-size: 14px;
+        min-width: 100px;
+    }
+    .post-category-dropdown {
+        font-size: 14px;
+        min-width: 100px;
     }
 }

@@ -14,18 +14,17 @@
  *= require_self
  */
 
-
 ul {
     list-style: none;
     margin: 0;
 }
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     background: rgb(246, 248, 250);
     margin: 0;
 }
 button {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     font-size: 20px;
     cursor: pointer;
 }
@@ -40,7 +39,13 @@ input[type='submit'] {
     cursor: pointer;
     text-shadow: 1px 1px 1px rgb(75, 75, 75);
 }
-
+a {
+    text-decoration: none;
+    color: rgb(1, 142, 218);
+}
+a:hover {
+    color: rgb(0, 173, 176);
+}
 .clearfix {
     clear: both;
 }
@@ -213,11 +218,11 @@ input[type='submit'] {
     font-size: 21px;
 }
 .single-budget {
-    border: 1px solid black;
+    box-shadow: 2px 2px 2px 2px gray;
     margin: auto;
 }
 .single-budget:hover {
-    background-color: rgb(132, 185, 255);
+    color: blue;
 }
 .pie-slice {
     opacity: 0.92;
