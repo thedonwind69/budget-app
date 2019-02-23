@@ -66,7 +66,7 @@ class NewBudgetForm extends React.Component {
         return (
             <div>
                 <div>
-                     <ul>{this.displayBudgetErrors()}</ul>
+                    <ul>{this.displayBudgetErrors()}</ul>
                 </div>
                 <div ref='postForm' class={`post-form-container`}>
                     <form ref="postFormReset" onSubmit={this.submitBudget.bind(this)}>
