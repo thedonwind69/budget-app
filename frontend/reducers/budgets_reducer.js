@@ -1,11 +1,10 @@
-import {RECEIVE_BUDGETS, RECEIVE_BUDGET, RESET_BUDGETS} from '../actions/budget_actions';
+import {RECEIVE_BUDGETS, RECEIVE_BUDGET, RESET_BUDGETS, UPDATE_WITH_DELETED_BUDGET} from '../actions/budget_actions';
 import merge from 'lodash/merge';
 
 const budgetsReducer = (state = {}, action) => {
     Object.freeze(state);
     switch(action.type) {
         case RECEIVE_BUDGETS:
-            // return action.budgets;
             const newState = {};
             action.budgets.forEach((budget) => {
                 newState[budget.id] = budget;
@@ -16,6 +15,13 @@ const budgetsReducer = (state = {}, action) => {
             return merge({}, state, newBudget);
         case RESET_BUDGETS:
             return {};
+        case UPDATE_WITH_DELETED_BUDGET:
+            const stateArray = Object.keys(state).map((key) => state[key]);
+            const newStateWithoutDeletedBudget = stateArray.filter((budget) => {
+                return budget.id !== action.budget.id
+                }    
+            )
+            return newStateWithoutDeletedBudget;
         default:
             return state;
     }

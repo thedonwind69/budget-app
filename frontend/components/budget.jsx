@@ -13,6 +13,11 @@ class Budget extends React.Component {
         super(props)
     }
 
+    deleteBudget () {
+        var {budget, currentUser} = this.props;
+        this.props.deleteBudget(currentUser.id, budget.id);
+    }
+
     render () {
         return (
             <div class='single-budget'>
@@ -21,6 +26,7 @@ class Budget extends React.Component {
                     <h1>{this.props.budget.year}</h1>
                     <h1>Annual Salary: {this.props.budget.salary}</h1>
                 </Link>
+                <button class='post-submit-button' onClick={this.deleteBudget.bind(this)}>Delete Budget</button>
             </div>
         )
        

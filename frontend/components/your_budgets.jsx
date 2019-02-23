@@ -19,7 +19,13 @@ class YourBudgets extends React.Component {
         var budgets = this.props.currentUserBudgets;
         var displayBudgets = budgets.map((singleBudget) => {
             return (
-                <div><Budget budget={singleBudget}></Budget></div>
+                <div>
+                    <Budget 
+                        budget={singleBudget} 
+                        deleteBudget={this.props.deleteBudget} 
+                        currentUser={this.props.currentUser}>
+                    </Budget>
+                </div>
             )
         });
         return displayBudgets;

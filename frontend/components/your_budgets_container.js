@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import YourBudgets from './your_budgets';
-import {fetchBudgets, resetBudgets} from '../actions/budget_actions';
+import {fetchBudgets, resetBudgets, deleteBudget} from '../actions/budget_actions';
 
 const mapStateToProps = (state) => ({
     currentUser: state.session.currentUser,
@@ -10,6 +10,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
     fetchBudgets: (user_id) => dispatch(fetchBudgets(user_id)),
     resetBudgets: () => dispatch(resetBudgets()),
+    deleteBudget: (user_id, budget_id) => dispatch(deleteBudget(user_id, budget_id))
 })
 
 const YourBudgetsContainer = connect(mapStateToProps, mapDispatchToProps)(YourBudgets);
