@@ -18,6 +18,12 @@ class Api::ExpensesController < ApplicationController
       end
     end
   
+    def destroy
+      @expense = Expense.find(params[:id])
+      @expense.destroy
+      render :show
+    end
+
     private
 
     def expense_params
