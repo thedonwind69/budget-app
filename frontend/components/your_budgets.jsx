@@ -43,7 +43,7 @@ class YourBudgets extends React.Component {
 
     zeroBudgets () {
         if (this.props.currentUserBudgets.length === 0) {
-            return <div><h1>You do not have any budgets!!!</h1></div>
+            return <div><h1>You do not have any budgets!</h1></div>
         };
     }
 
