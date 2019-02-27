@@ -13,6 +13,10 @@ class Expense extends React.Component {
         super(props)
     }
 
+    deleteExpense () {
+        
+    }
+
     render () {
         var {expense} = this.props;
         return (
@@ -21,6 +25,7 @@ class Expense extends React.Component {
                 <p>Amount: ${expense.amount}</p>
                 <p>Description:</p>
                 <p>{expense.description}</p>
+                <button>Delete Expense</button>
             </div>
         )
     }
