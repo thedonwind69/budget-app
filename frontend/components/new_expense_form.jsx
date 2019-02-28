@@ -95,11 +95,16 @@ class NewExpenseForm extends React.Component {
     }
 
     displayAllExpenses () {
-        var {currentExpenses} = this.props;
+        var {currentExpenses, currentBudget, deleteExpense} = this.props;
         var displayExpenses = currentExpenses.map((expense) => {
             return (
                 <li>
-                    <Expense expense={expense} />
+                    <Expense 
+                        expense={expense} 
+                        currentBudget={currentBudget} 
+                        currentUserId={this.state.user_id}
+                        deleteExpense={deleteExpense}
+                    />
                 </li>
             )
         })
