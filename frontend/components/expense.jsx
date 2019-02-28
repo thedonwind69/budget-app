@@ -19,7 +19,6 @@ class Expense extends React.Component {
     }
 
     render () {
-        console.log(this.props);
         var {expense} = this.props;
         return (
             <div>

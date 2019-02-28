@@ -108,7 +108,8 @@ class NewExpenseForm extends React.Component {
                 </li>
             )
         })
-        return displayExpenses.reverse();
+        var display = currentExpenses.length > 0 ? displayExpenses.reverse() : <h1>You don't have any expenses yet.</h1>
+        return display;
     }
 
     displayErrors () {
