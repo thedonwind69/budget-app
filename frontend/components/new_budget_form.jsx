@@ -68,7 +68,7 @@ class NewBudgetForm extends React.Component {
                 <div>
                     <ul>{this.displayBudgetErrors()}</ul>
                 </div>
-                <div ref='postForm' class={`post-form-container`}>
+                <div ref='postForm' class={`post-budget-container`}>
                     <form ref="postFormReset" onSubmit={this.submitBudget.bind(this)}>
                         <label for='month'>Month</label>
                             <br />

@@ -13,14 +13,16 @@
  *= require_tree .
  *= require_self
  */
-
+html {
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.815), rgba(192, 227, 245, 0.906));
+    min-height: 100%;
+}
 ul {
     list-style: none;
     margin: 0;
 }
 body {
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-    background: rgb(246, 248, 250);
     margin: 0;
 }
 button {
@@ -218,6 +220,7 @@ a:hover {
 }
 .single-budget {
     box-shadow: 1px 0px 1px 1px gray;
+    background: rgba(247, 250, 252, 0.934);
     margin: auto;
 }
 .single-budget:hover {
