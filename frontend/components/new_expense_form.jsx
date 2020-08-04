@@ -43,6 +43,7 @@ class NewExpenseForm extends React.Component {
             expenseCategoryObject['amount'] = expenseObject[currentKey];
             allExpenses.push(expenseCategoryObject);
         }
+        console.log(this.props); 
         createPieChart(allExpenses);
     }
 

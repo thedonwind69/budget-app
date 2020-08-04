@@ -36,13 +36,19 @@ class EditBudget extends React.Component {
 
     render () {
         var {currentBudget, currentUser} = this.props;
+        var {currentExpenses} = this.props;
+        var totalExpenses = 0;
+        currentExpenses.forEach((expense) => {
+            totalExpenses += expense.amount;
+        })
+        var moneySpent = totalExpenses;
         if (currentUser && currentBudget) {
             return (
                 <div>
                     <h1>Month of {currentBudget.month} {currentBudget.year}</h1>
                     <h1>{currentBudget.salary} annual salary</h1>
                     <div>
-                        <NewExpenseFormContainer currentBudget={currentBudget} takeHomePayDataset={this.calculateTakeHomePay()}/>
+                        <NewExpenseFormContainer moneySpent={moneySpent} currentBudget={currentBudget} takeHomePayDataset={this.calculateTakeHomePay()}/>
                     </div>
                 </div>
             ) 
