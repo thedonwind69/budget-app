@@ -32,6 +32,20 @@ var arc = d3.arc()
 var pie = d3.pie() 
   .value(function(d) { return d.amount; }) 
   .sort(null); 
+// var pie = d3.pie() 
+//   .value(function(d) { 
+//     if (d.type === "Take-Home") {
+//       console.log("take home pay is " + takeHomePay);
+//       console.log("money spent is " + moneySpent);
+//       d.amount = d.amount - moneySpent;
+//       return d.amount;
+//     } else {
+//       return d.amount; 
+//     }
+    
+//   }) 
+//   .sort(null); 
+
 
 
 var tooltip = d3.select('#pie-chart') 
