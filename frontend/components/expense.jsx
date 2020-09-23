@@ -15,7 +15,10 @@ class Expense extends React.Component {
 
     deleteExpense () {
         var {expense, currentUserId, currentBudget, deleteExpense} = this.props;
-        deleteExpense(currentUserId, currentBudget.id, expense.id);
+        var confirmMessage = confirm(`Are you sure you want to delete this expense?`)
+        if (confirmMessage) {
+            deleteExpense(currentUserId, currentBudget.id, expense.id);
+        }
     }
 
     render () {
