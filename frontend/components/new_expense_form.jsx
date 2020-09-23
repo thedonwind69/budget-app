@@ -18,10 +18,8 @@ class NewExpenseForm extends React.Component {
 
     generatePayInfo () {
         var {takeHomePayDataset, currentExpenses} = this.props;
-        // var pieButton = ReactDOM.findDOMNode(this.refs.pieButton);
         var pieChart = ReactDOM.findDOMNode(this.refs.pieChart);
         pieChart.innerHTML = "";
-        // pieButton.classList.add('hide-this-shit');
         var allExpenses = [];
         for (let j=0; j<takeHomePayDataset.length; j++) {
             allExpenses.push(takeHomePayDataset[j]);
@@ -43,12 +41,22 @@ class NewExpenseForm extends React.Component {
             expenseCategoryObject['amount'] = expenseObject[currentKey];
             allExpenses.push(expenseCategoryObject);
         }
-        createPieChart(allExpenses);
+        return allExpenses;
     }
 
+    generatePieChart (array) {
+        var pieChart = ReactDOM.findDOMNode(this.refs.pieChart);
+        pieChart.innerHTML = "";
+        createPieChart(array);
+    }
+
+    // componentDidMount () {
+    //     console.log(this.props);
+    //     console.log('mounting...');
+    // }
 
     componentDidUpdate () {
-        this.generatePayInfo();
+        this.generatePieChart(this.generatePayInfo());
     }
 
     componentWillUnmount () {
@@ -131,7 +139,6 @@ class NewExpenseForm extends React.Component {
                 <div>
                     <div ref='pieChart' class='left' id='pie-chart'>
                     </div>
-                    {/* <button ref='pieButton' onClick={this.generatePayInfo.bind(this)} class='post-submit-button'>View Paycheck Info:</button> */}
                     <div ref='postForm' class={`post-form-container`}>
                         <form ref="postFormReset" onSubmit={this.submitExpense.bind(this)}>
                                 <br />
